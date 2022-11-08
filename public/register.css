@@ -1,0 +1,22 @@
+.card{
+    border: none;
+}
+.card-body{
+    border-radius: 20px;
+    margin: 15px;
+    width: 30%;
+    background-color: #fff;
+    color: black;
+    border: green solid;
+}
+label{
+    padding: 3px;
+}
+.boton{
+    margin-top: 100%;
+}
+i{
+    margin: 0;
+    font-size: 70px;
+    color: rgba(62,190,41,1);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/register.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="/auth" method="post">
+            <div class="card justify-content-center align-items-center">
+                <h2>Login</h2>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <label>rol:</label>
+                            <select class="form-select" name="rol">
+                                <option>Admin</option>
+                                <option>Usuario</option>
+                            </select>
+                            <label>Contraseña:</label>
+                            <input type="password" class="form-control" name="contraseña">
+                        </div>
+                        <a href="/register" class="text-center">¿No tienes cuenta? create una</a>
+                        <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>'
+            })
+        </script>
+        <% } %>
+</body>
+</html>
